@@ -1,17 +1,60 @@
+###################################################################################################
+########################################      VERSIONS     ########################################
+###################################################################################################
 [versions]
 agp = "8.6.1"
-kotlin = "1.9.0"
+kotlin = "2.1.20"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.10.1"
-composeBom = "2024.04.01"
+composeBom = "2025.03.00"
 appcompat = "1.7.0"
 material = "1.12.0"
 jetbrainsKotlinJvm = "1.9.0"
+androidTools = "31.9.1"
+playCore = "2.1.0"
+coreSplashscreen = "1.0.1"
+coilCompose = "2.6.0"
+composeCompiler = "1.5.9"
+desugar_jdk_libs = "2.1.5"
+ktor = "2.3.8"
+ktorClientLogging = "2.3.8"
+ktorServerCallLogging = "2.3.7"
+dagger = "2.56"
+dagger-hilt = "2.56"
+hilt-navigation-compose = "1.2.0"
+koin = "3.5.3"
+materialIconsExtended = "1.7.8"
+navigationCompose = "2.8.9"
+securityCryptoKtx = "1.1.0-alpha06"
+timber = "5.0.1"
+ksp = "2.1.20-1.0.31"
+room = "2.6.1"
+maps = "4.3.3"
+coroutines = "1.8.0"
+gmsLocation = "21.3.0"
+mapsUtils = "5.0.0"
+bson = "4.11.1"
+work = "2.10.0"
+kotlinx-serialization = "1.6.3"
+secretsPlugin = "2.0.1"
+playServicesMaps = "19.1.0"
+annotation = "1.9.1"
 
+#******* Project versions *******#
+projectApplicationId = "com.ufrhub.application"
+projectVersionName = "1.0"
+projectMinSdkVersion = "26"
+projectTargetSdkVersion = "35"
+projectCompileSdkVersion = "35"
+projectVersionCode = "1"
+
+###################################################################################################
+########################################     LIBRARIES     ########################################
+###################################################################################################
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -29,10 +72,124 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
+androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycleRuntimeKtx" }
+androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleRuntimeKtx" }
+androidx-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "materialIconsExtended" }
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+androidx-security-crypto-ktx = { module = "androidx.security:security-crypto-ktx", version.ref = "securityCryptoKtx" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
+core = { module = "com.google.android.play:feature-delivery", version.ref = "playCore" }
+core-testing = { module = "com.google.android.play:feature-delivery-ktx", version.ref = "playCore" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-coroutines-play-services = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services", version.ref = "coroutines" }
+desugar-jdk-libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar_jdk_libs" }
+androidx-work = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "work" }
+dagger = { group = "com.google.dagger", name = "dagger", version.ref = "dagger" }
+dagger-compiler = { group = "com.google.dagger", name = "dagger-compiler", version.ref = "dagger" }
+dagger-hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "dagger-hilt" }
+dagger-hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "dagger-hilt" }
+hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hilt-navigation-compose" }
+koin-android-workmanager = { group = "io.insert-koin", name = "koin-androidx-workmanager", version.ref = "koin" }
+koin-android = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
+koin-core = { group = "io.insert-koin", name = "koin-core", version.ref = "koin" }
+koin-androidx-compose = { group = "io.insert-koin", name = "koin-androidx-compose", version.ref = "koin" }
+ktor-client-auth = { module = "io.ktor:ktor-client-auth", version.ref = "ktor" }
+ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
+ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktorClientLogging" }
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-server-call-logging = { module = "io.ktor:ktor-server-call-logging", version.ref = "ktorServerCallLogging" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+google-maps-android-compose = { module = "com.google.maps.android:maps-compose", version.ref = "maps" }
+google-android-gms-play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "gmsLocation" }
+org-mongodb-bson = { module = "org.mongodb:bson", version.ref = "bson" }
+play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
+google-maps-android-utils-ktx = { module = "com.google.maps.android:maps-utils-ktx", version.ref = "mapsUtils" }
+annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
 
+#******* Gradle *******#
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+android-tools-common = { group = "com.android.tools", name = "common", version.ref = "androidTools" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+room-gradlePlugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "room" }
+
+###################################################################################################
+########################################      PLUGINS      ########################################
+###################################################################################################
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "dagger-hilt" }
+room = { id = "androidx.room", version.ref = "room" }
+androidDynamicFeature = { id = "com.android.dynamic-feature", version.ref = "agp" }
+mapsplatform-secrets-plugin = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "secretsPlugin" }
 
+#******* Custom Build-Logic Convention Plugins *******#
+convention-android-application = { id = "com.iamufr.gradle-management-system.build-logic.convention.android.application", version = "unspecified" }
+convention-android-application-compose = { id = "com.iamufr.gradle-management-system.build-logic.convention.android.application.compose", version = "unspecified" }
+convention-android-library = { id = "com.iamufr.gradle-management-system.build-logic.convention.android.library", version = "unspecified" }
+convention-android-library-compose = { id = "com.iamufr.gradle-management-system.build-logic.convention.android.library.compose", version = "unspecified" }
+convention-dagger-hilt = { id = "com.iamufr.gradle-management-system.build-logic.convention.dagger.hilt", version = "unspecified" }
+convention-android-feature-ui = { id = "com.iamufr.gradle-management-system.build-logic.convention.android.feature.ui", version = "unspecified" }
+convention-android-room = { id = "com.iamufr.gradle-management-system.build-logic.convention.android.room", version = "unspecified" }
+convention-jvm-library = { id = "com.iamufr.gradle-management-system.build-logic.convention.jvm.library", version = "unspecified" }
+convention-jvm-ktor = { id = "com.iamufr.gradle-management-system.build-logic.convention.jvm.ktor", version = "unspecified" }
+
+###################################################################################################
+########################################      BUNDLES      ########################################
+###################################################################################################
+[bundles]
+compose = [
+    "androidx-activity-compose",
+    "androidx-lifecycle-runtime-compose",
+    "androidx-lifecycle-viewmodel-compose",
+    "androidx-material3",
+    "androidx-ui",
+    "androidx-ui-graphics",
+    "androidx-ui-tooling-preview"
+]
+compose-debug = [
+    "androidx-ui-tooling",
+    "androidx-ui-test-manifest"
+]
+dagger-hilt = [
+    "dagger",
+    "dagger-hilt",
+    "hilt-navigation-compose"
+]
+dagger-hilt-compiler = [
+    "dagger-compiler",
+    "dagger-hilt-compiler",
+]
+koin = [
+    "koin-core",
+    "koin-android",
+    "koin-android-workmanager"
+]
+koin-compose = [
+    "koin-core",
+    "koin-android",
+    "koin-android-workmanager",
+    "koin-androidx-compose"
+]
+ktor = [
+    "ktor-client-auth",
+    "ktor-client-cio",
+    "ktor-client-content-negotiation",
+    "ktor-client-core",
+    "ktor-client-logging",
+    "ktor-serialization-kotlinx-json",
+    "ktor-server-call-logging"
+]
